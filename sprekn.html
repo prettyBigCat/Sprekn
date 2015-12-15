@@ -1,0 +1,26 @@
+<div class="row row-top" ng-controller="sprekn as vm">
+	<div class="col-lg-8 col-lg-offset-2">
+		<h1>Let's Chat</h1>
+		<div class="row row-top">
+			<form  ng-submit="vm.userchat(vm.mess)">		
+			<div class="input-group">
+				<input type="text" ng-model="vm.mess" class="form-control" placeholder="Say something...">
+				<span class="input-group-btn">
+        			<button class="btn btn-primary"  type="submit">Say</button>
+      			</span>
+			</div>
+		</form>	
+		</div>		
+		<div class="row row-top">
+			<div class="chatso-box">
+		<ul>
+			<li ng-repeat="c in vm.chat track by $index">
+				<div class="{{c.class}}">
+					{{c.message}}
+				</div>
+			</li>
+		</ul>
+		</div>
+		</div>			
+	</div>
+</div>

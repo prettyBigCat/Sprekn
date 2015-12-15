@@ -1,0 +1,23 @@
+.row-top{
+	margin-top: 10px;
+}
+
+.navbar-inverse{
+	background-color: #353535 !important;
+	border-top-color: #dd4814 !important;
+}
+
+#page {
+	margin-top: 3em;
+}
+
+.container{
+	width: 85% !important;
+	max-width: 2000px !important;
+}
+
+.chatso-box{
+	height: 700px;
+	overflow-y: scroll;
+	border: 1px solid #353535;
+}

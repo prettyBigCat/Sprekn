@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">  
+  <title>Sprekn</title>
+  <meta name="description" content="Chatso cares for you.">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="Stuff/css/styles.css?v=1.0">
+  <link rel="stylesheet" href="Stuff/css/bootstrap.min.css?v=1.0">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body ui-view ng-app="app">
+ <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a ui-sref="index.chatso" class="navbar-brand">Sprekn - BETA</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">                               
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a ui-sref="index.about">About</a></li>                      
+          </ul>
+        </div>
+      </div>
+</div>    
+    <div id="page" class="container">  
+         <div ui-view></div>
+    </div>
+    
+<div class="navbar navbar-inverse navbar-fixed-bottom">
+      
+</div>
+  <script src="Stuff/js/angular.min.js"></script>
+  <script src="Stuff/js/angular-ui-router.min.js"></script>
+  <script src="app/app.js"></script>
+  <script src="Stuff/js/underscore-min.js"></script>
+  <script src="Stuff/js/routes.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="Stuff/js/bootstrap.min.js"></script>
+  <script src="app/sprekn/sprekn.js"></script>
+  <script src="app/main/main.js"></script>
+</body>
+</html>
