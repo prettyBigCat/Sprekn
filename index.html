@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="en">
+<html lang="en" class="ntph">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">  
@@ -10,13 +10,14 @@
 
   <link rel="stylesheet" href="Stuff/css/styles.css?v=1.0">
   <link rel="stylesheet" href="Stuff/css/bootstrap.min.css?v=1.0">
+  <link rel="stylesheet" href="Stuff/css/perfect-scrollbar.min.css">
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 
-<body ui-view ng-app="app">
+<body ui-view ng-app="app" class="ih">
  <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -37,18 +38,15 @@
       </div>
 </div>    
     <div id="page" class="container">  
-         <div ui-view></div>
+         <div ui-view class="ih"></div>
     </div>
-    
-<div class="navbar navbar-inverse navbar-fixed-bottom">
-      
-</div>
   <script src="Stuff/js/angular.min.js"></script>
   <script src="Stuff/js/angular-ui-router.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="Stuff/js/perfect-scrollbar.jquery.js"></script>
   <script src="app/app.js"></script>
   <script src="Stuff/js/underscore-min.js"></script>
   <script src="Stuff/js/routes.js"></script>
-  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="Stuff/js/bootstrap.min.js"></script>
   <script src="app/sprekn/sprekn.js"></script>
   <script src="app/main/main.js"></script>

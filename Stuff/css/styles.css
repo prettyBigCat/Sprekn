@@ -9,6 +9,7 @@
 
 #page {
 	margin-top: 3em;
+	height: 100%
 }
 
 .container{
@@ -17,7 +18,40 @@
 }
 
 .chatso-box{
-	height: 700px;
-	overflow-y: scroll;
-	border: 1px solid #353535;
+	height: 90%;
+	overflow: hidden;
+	position: relative;
+	padding:10px;
+}
+
+.chat{
+	max-width: 75%;
+	padding: 10px;
+	margin: 10px;
+	clear:both;
+	border-radius: 5px;
+	font-size: 2em;
+}
+
+.you{
+    background-color: #353535;
+    color: #fff;
+    float: right;   	
+}
+
+.sprekn{
+    background-color: #DD4814;
+	float:left;
+}
+
+.ih{
+	height:inherit;
+}
+
+.oph{
+	height:100%
+}
+
+.ntph{
+	height:92%;
 }

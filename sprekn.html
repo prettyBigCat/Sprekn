@@ -1,26 +1,25 @@
-<div class="row row-top" ng-controller="sprekn as vm">
-	<div class="col-lg-8 col-lg-offset-2">
-		<h1>Let's Chat</h1>
-		<div class="row row-top">
-			<form  ng-submit="vm.userchat(vm.mess)">		
+<div ng-controller="sprekn as vm" class="ih">	
+	<div class="row row-top ih">
+		<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 ih">					
+			<div class="row row-top ih">
+				<div id="chatbox" class="chatso-box">		
+					<div ng-repeat="c in vm.chat track by $index">
+						<div class="message">
+							<span class="chat"  ng-class="c.who"> {{c.message}}</span>	
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+	</div>
+	<div class="row row-top">
+		<form  ng-submit="vm.userchat(vm.mess)">		
 			<div class="input-group">
-				<input type="text" ng-model="vm.mess" class="form-control" placeholder="Say something...">
+				<input autofocus type="text" ng-model="vm.mess" class="form-control" placeholder="Say something...">
 				<span class="input-group-btn">
-        			<button class="btn btn-primary"  type="submit">Say</button>
-      			</span>
+					<button class="btn btn-primary"  type="submit">Say</button>
+				</span>
 			</div>
 		</form>	
-		</div>		
-		<div class="row row-top">
-			<div class="chatso-box">
-		<ul>
-			<li ng-repeat="c in vm.chat track by $index">
-				<div class="{{c.class}}">
-					{{c.message}}
-				</div>
-			</li>
-		</ul>
-		</div>
-		</div>			
 	</div>
-</div>
+</div>	

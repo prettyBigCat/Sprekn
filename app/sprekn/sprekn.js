@@ -10,9 +10,18 @@ app.controller("sprekn", ["$scope", function($scope) {
   }
 
   vm.markovs = []
-  vm.userchat = function(chat) {
+  
+  var wrapper = $("#chatbox");
+  wrapper.perfectScrollbar({includePadding:true, minScrollbarLength: 15 }); 
+  wrapper.perfectScrollbar('update');
  
-    vm.chat.push("You: " + chat)
+  
+  vm.userchat = function(chat) { 
+    vm.chat.push({
+      who: 'you',
+      message: chat
+    });
+    
     var wordies = chat.split(" ");
     vm.mess = '';
     for (var i = 0; i < wordies.length; i++) {
@@ -120,10 +129,10 @@ app.controller("sprekn", ["$scope", function($scope) {
     }
 
     //construct something
-    var message = "Sprekn: ";
+    
     var wordObj = getRandom(vm.dict.starters)
     var pWord = wordObj.word;
-    message += (pWord + ' ');
+    var message = (pWord + ' ');
 
     for (var i = 0; i < 25; i++) {
       wordObj = _.findWhere(vm.markovs, {
@@ -139,10 +148,16 @@ app.controller("sprekn", ["$scope", function($scope) {
 
     if (vm.dict.enders.length) {
       var end = getRandom(vm.dict.enders).word;
-	  if(pWord !== word)  message += end;    
+	    if(pWord !== word)  message += end;    
     }
 
-    vm.chat.push(message)
+    vm.chat.push({
+      who: 'sprekn',
+      message: message
+    })
+    
+     wrapper.animate({ scrollTop: wrapper[0].scrollHeight }, 1000);
+                    wrapper.perfectScrollbar('update');
   }
 
   function getRandom(array) {
