@@ -30,7 +30,7 @@
 	margin: 10px;
 	clear:both;
 	border-radius: 5px;
-	font-size: 2em;
+	font-size: 1.5em;
 }
 
 .you{
@@ -54,4 +54,8 @@
 
 .ntph{
 	height:92%;
+}
+
+.text-sm{
+	font-size: 1em !important
 }
